@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Image;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    $images = Image::all(); // Metodo del orm que saca todas las imagenes en un array
+    foreach($images as $image){
+        echo $image->image_path.'<br>';
+        echo $image->description.'<br>';
+        echo $image->user->name;
+        echo $image->user->surname;
+        echo "<hr>";
+    }
+    die();
+    
     return view('welcome');
 });
