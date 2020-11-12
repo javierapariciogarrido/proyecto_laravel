@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Image;
+//use App\Image;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,17 +12,37 @@ use App\Image;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
+    
     $images = Image::all(); // Metodo del orm que saca todas las imagenes en un array
     foreach($images as $image){
         echo $image->image_path.'<br>';
         echo $image->description.'<br>';
-        echo $image->user->name;
-        echo $image->user->surname;
+        echo $image->user->name.'  '.$image->user->surname.'<br>' ;
+        if(count($image->comments)!=0){
+            echo "<h4>Comentarios: </h4>";
+            foreach($image->comments as $comment){
+                echo $comment->content." Comentario hecho por: ".$comment->user->name.'<br>';
+            }
+        }    
+        
+        echo "LIKES : ".count($image->likes)."<br>";
+        echo "Han dado likes la siguientes personas: ".'<br>';
+        foreach($image->likes as $like){
+            echo $like->user->name.'<br>';
+        }
+        
         echo "<hr>";
+            
     }
     die();
     
     return view('welcome');
 });
+ 
+ */
+
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
