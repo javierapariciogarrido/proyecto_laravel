@@ -1,0 +1,32 @@
+/*ESTILOS DEL AVATAR DEL USUARIO QUE SE MUESTRA EN LA MINIATURA AL EDITAR DATOS USUARIO*/ 
+ form .avatar{
+    display: block;
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+/*ESTILOS LABEL QUE PONE CAMBIAR AVATAR EN LA EDICION DE DATOS DE USUARIO*/
+.labelavatar{
+    display:block;
+    margin-left: -39%;
+    margin-top: 14%;
+    margin-bottom: -10%;
+}
+
+
+/*ESTILOS DEL DIV QUE ESTA DENTRO DEL INCLUDE QUE MUESTRA EL AVATAR DEL USUARIO EN EL MENU*/
+.navbar .container-avatar{
+    width: 60px;
+    height: 60px;
+    border-radius: 900px;
+    overflow: hidden;
+    margin-left: 220%;
+    margin-top: -14%;
+    border:2px solid #474849;
+}
+
+/*ESTILOS DE LA ETIQUETA IMG DE LA IMAGEN DEL AVATAR QUE ESTA EN EL MENU */
+.navbar .container-avatar img{
+    height:100%;
+    width: 100%;
+}

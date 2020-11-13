@@ -5,9 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Illuminate\Http\Response;   
 
 class UserController extends Controller
 {
+    
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
+    
     public function config(){
         return view('user.config');
     }
@@ -44,6 +52,12 @@ class UserController extends Controller
         $user->nick=$nick;
         $user->email=$email;
         
+        /*AQUI HAY QUE IMPLEMENTAR QUE ANTES DE GUARDAR LA IMAGEN SI EL USUARIO YA TIENE UNA 
+        IMAGEN GUARDADA HAY QUE BORRAR DEL SERVIDOR LA IMAGEN QUE TIENE ACTUALMENTE PARA ASI NO 
+         * SATURAR EL SERVIDOR DE IMAGENES UN MISMO CLIENTE
+        Preguntariamos if ($user->image) entonces borramos en el disco la imagen 
+         */
+                
         // Guardamos la imagen del usuario para ello :
         // 1ª) Recogemos el archivo de imagen que llega por el formulario en image_path
         $image_path=$request->file('image');
@@ -68,4 +82,15 @@ class UserController extends Controller
         
         return redirect()->route('config')->with(['message'=>'Usuario actualizado correctamente']);
     }
+    
+    public function getImage($filename){
+        // Saco el fichero de imagen que le paso por parametro al método y que está almacenada en
+        //  la carpeta storage/app/users y meto el fichero en la variable file
+        $file=Storage::disk('users')->get($filename);
+    return new Response($file,200);       
+    }
+    
+    
+    
+    
 }

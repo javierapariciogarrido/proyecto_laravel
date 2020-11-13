@@ -75,13 +75,21 @@
                                         @enderror
                                     </div>
                                 </div>
-
+                                
+                                
+                                
+                                
                                 <div class="form-group row">
+                                    
+                                    
                                     <label for="image" class="col-md-4 col-form-label text-md-right">{{ __('Avatar') }}</label>
 
                                     <div class="col-md-6">
+                                         {{-- SACO LA IMAGEN DEL AVATAR QUE TIENE EL CLIENTE, SI TIENE IMAGEN --}} 
+                                        @include('includes.avatar') <!-- Include que llama a un metodo para sacar la imagen-->
+                                        <label class="labelavatar">Cambiar Avatar</label>
                                         <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image">
-
+                                        
                                         @error('image')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -89,8 +97,9 @@
                                         @enderror
                                     </div>
                                 </div>
-
-
+                                
+                                
+                                
                                 <div class="form-group row mb-0">
                                     <div class="col-md-6 offset-md-4">
                                         <button type="submit" class="btn btn-primary">

@@ -1,0 +1,59 @@
+[33mcommit d4f731f3bb35babbecb8159c58ef9b121fa40ed4[m[33m ([m[1;36mHEAD -> [m[1;32mprueba[m[33m)[m
+Author: Javier <javierapariciogarrido@gmail.com>
+Date:   Fri Nov 13 14:37:33 2020 +0100
+
+    Aplicacion con subida de archivos del usuario implementada
+
+[33mcommit cc34d678f0ee6bcbc029650bdf235d44680fae19[m
+Author: Javier <javierapariciogarrido@gmail.com>
+Date:   Fri Nov 13 09:42:30 2020 +0100
+
+    Aplicacion en proceso metodo de actualizar
+
+[33mcommit 8f5243c955698f3959565b59d85d72bb42dde67c[m[33m ([m[1;31morigin/prueba[m[33m)[m
+Author: Javier <javierapariciogarrido@gmail.com>
+Date:   Thu Nov 12 21:12:51 2020 +0100
+
+    Ultimos cambios app funciona perfe
+
+[33mcommit 4e1efec270e2f2d9da619609231ee1d558eb06b5[m
+Author: Javier <javierapariciogarrido@gmail.com>
+Date:   Thu Nov 12 20:07:26 2020 +0100
+
+    REgistro-login mas ultimos cambios correctos
+
+[33mcommit 3ca0673e3f8a244237b04af01469499f5856b6c9[m
+Author: Javier <javierapariciogarrido@gmail.com>
+Date:   Thu Nov 12 20:05:17 2020 +0100
+
+    Registro-Login usuarios correcto
+
+[33mcommit 65b23e733a6bc6970b6b9d92f3726355d2615486[m
+Author: Javier <javierapariciogarrido@gmail.com>
+Date:   Wed Nov 11 20:37:52 2020 +0100
+
+    Aplicacion funcionando perfecta
+
+[33mcommit 54a281bbfd74ff94549ee77344aa5cbb8bdcc9dd[m
+Author: Javier <javierapariciogarrido@gmail.com>
+Date:   Wed Nov 11 20:12:03 2020 +0100
+
+    Aplicación con base de datos rellena
+
+[33mcommit 888dc5a2a171f34f8e2b2b190a4376a6a8435b8c[m
+Author: Javier <javierapariciogarrido@gmail.com>
+Date:   Wed Nov 11 19:28:16 2020 +0100
+
+    Proyecto con bases de datos ya configuradas perfe
+
+[33mcommit 690b6743b6222e8379a0ce9e27effae0c43be26b[m[33m ([m[1;32mmaster[m[33m)[m
+Author: Javier <javierapariciogarrido@gmail.com>
+Date:   Wed Nov 11 17:22:26 2020 +0100
+
+    Base de datos creada
+
+[33mcommit 3c7a703d668f353bf482da3e06e4be8e9d280cfc[m
+Author: Javier <javierapariciogarrido@gmail.com>
+Date:   Tue Nov 10 21:35:16 2020 +0100
+
+    Proyecto Inicial
