@@ -31,6 +31,7 @@
                                             <strong>{{ $message }}</strong>
                                         </span>
                                         @enderror
+                                        
                                     </div>
                                 </div>
 
@@ -84,7 +85,7 @@
                                     
                                     <label for="image" class="col-md-4 col-form-label text-md-right">{{ __('Avatar') }}</label>
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-7">
                                          {{-- SACO LA IMAGEN DEL AVATAR QUE TIENE EL CLIENTE, SI TIENE IMAGEN --}} 
                                         @include('includes.avatar') <!-- Include que llama a un metodo para sacar la imagen-->
                                         <label class="labelavatar">Cambiar Avatar</label>

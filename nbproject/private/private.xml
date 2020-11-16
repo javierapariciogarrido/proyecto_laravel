@@ -7,6 +7,8 @@
             <file>file:/C:/wamp64/www/master-php/proyecto-laravel/routes/web.php</file>
             <file>file:/C:/wamp64/www/master-php/proyecto-laravel/resources/views/layouts/app.blade.php</file>
             <file>file:/C:/wamp64/www/master-php/proyecto-laravel/app/Http/Controllers/UserController.php</file>
+            <file>file:/C:/wamp64/www/master-php/proyecto-laravel/resources/views/image/create.blade.php</file>
+            <file>file:/C:/wamp64/www/master-php/proyecto-laravel/app/Http/Controllers/ImageController.php</file>
         </group>
     </open-files>
 </project-private>

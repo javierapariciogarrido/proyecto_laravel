@@ -16,13 +16,12 @@
 
 /*ESTILOS DEL DIV QUE ESTA DENTRO DEL INCLUDE QUE MUESTRA EL AVATAR DEL USUARIO EN EL MENU*/
 .navbar .container-avatar{
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     border-radius: 900px;
     overflow: hidden;
     margin-left: 220%;
     margin-top: -14%;
-    border:2px solid #474849;
 }
 
 /*ESTILOS DE LA ETIQUETA IMG DE LA IMAGEN DEL AVATAR QUE ESTA EN EL MENU */
