@@ -14,7 +14,16 @@
 }
 
 
-/*ESTILOS DEL DIV QUE ESTA DENTRO DEL INCLUDE QUE MUESTRA EL AVATAR DEL USUARIO EN EL MENU*/
+/*ESTILOS DEL AVATAR QUE APARECE CUANDO UN USUARIO SUBE UNA IMAGEN EN EL LISTIN DE IMAGENES*/
+.imagen_publicada .container-avatar{
+    width: 65px;
+    height: 65px;
+    border-radius: 900px;
+    overflow: hidden;
+    float:left;
+}
+
+/*ESTILOS DE LA IMAGEN DEL AVATAR QUE SALE EN EL MENU ARRIBA A LA DERECHA AL LOGARNOS */ 
 .navbar .container-avatar{
     width: 65px;
     height: 65px;
@@ -24,8 +33,51 @@
     margin-top: -14%;
 }
 
-/*ESTILOS DE LA ETIQUETA IMG DE LA IMAGEN DEL AVATAR QUE ESTA EN EL MENU */
-.navbar .container-avatar img{
+/*ESTILOS DE LA ETIQUETA IMG DE LA IMAGEN DEL AVATAR QUE ESTA EN EL MENU Y DEL AVATAR QUE APARECE
+CUANDO SE SUBE UNA IMAGEN*/
+.navbar .container-avatar img,
+.imagen_publicada .container-avatar img{
     height:100%;
     width: 100%;
+}
+
+/*ESTILOS DEL NOMBRE Y APELLIDOS  QUE APARECEN AL LADO DEL AVATAR AL PUBLICAR UNA IMAGEN*/
+.imagen_publicada .data-user{
+    font-weight: bold;
+    margin-left:13%;
+    margin-top: 6%;
+}
+
+/*ESTILOS DEL NICK QUE SALE CON LA ARROBA AL LADO DEL NOMBRE DEL USUARIO CUANDO PUBLICA IMAGEN*/
+.imagen_publicada .nickname{
+    color:gray;
+}
+
+
+/*ESTILOS DE LAs TARJETAS */
+.card{
+    margin-bottom: 5%;
+}
+
+/*ESTILOS DEL CUERPO DE LA TARJETA */
+.card .card-body{
+    padding:0;
+}
+
+
+/*ESTILOS A LA HORA DE MOSTRAR LAS IMAGENES SUBIDAS EN EL HOME INDEX ES DECIR EN PAGINA PRINCIPAL*/
+.image-container{
+    /*width: 100%;*/
+    max-height: 400px;
+    overflow: hidden;
+}
+
+/*ESTILOS DE LAS IMAGENES EN SI QUE ESTAN EN LA PANTALLA PRINCIPAL DE TODAS LAS FOTOS SUBIDAS*/
+.image-container img{
+    width: 100%; /*ESTO HACE QUE LA IMAGEN SE VEA TODA ENTERA Y SE AJUSTE AL ESPACIO DE LA TARJETA*/
+}
+
+/*ESTILOS DE LA DESCRIPCION QUE INCLUYE EL NICK Y LA DESCRIPCION*/
+.imagen_publicada .description{
+    padding: 2%;
 }
