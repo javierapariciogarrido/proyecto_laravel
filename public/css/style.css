@@ -44,9 +44,24 @@ CUANDO SE SUBE UNA IMAGEN*/
 /*ESTILOS DEL NOMBRE Y APELLIDOS  QUE APARECEN AL LADO DEL AVATAR AL PUBLICAR UNA IMAGEN*/
 .imagen_publicada .data-user{
     font-weight: bold;
-    margin-left:13%;
+    margin-left:11%;
     margin-top: 6%;
 }
+
+/*ESTILOS DEL NOMBRE Y APELLIDOS  QUE APARECEN AL LADO DEL AVATAR AL PUBLICAR UNA IMAGEN
+CUANDO ESTAMOS EN LA PANTALLA DE DETALLE DE LA IMAGEN DONDE SE VE LA IMAGEN MAS AMPLIADA*/
+.imagen_publicada .data-user-detail{
+    font-weight: bold;
+    margin-left: 7%;
+    margin-top: 4%;
+}
+
+
+/*ESTILOS DEL ENLACE DEL NOMBRE Y NICK PARA VER EL DETALLE DE LA FOTO*/
+.imagen_publicada .data-user a{
+    color:#444;
+}
+
 
 /*ESTILOS DEL NICK QUE SALE CON LA ARROBA AL LADO DEL NOMBRE DEL USUARIO CUANDO PUBLICA IMAGEN*/
 .imagen_publicada .nickname{
@@ -76,6 +91,18 @@ CUANDO SE SUBE UNA IMAGEN*/
 .image-container img{
     width: 100%; /*ESTO HACE QUE LA IMAGEN SE VEA TODA ENTERA Y SE AJUSTE AL ESPACIO DE LA TARJETA*/
 }
+
+/*ESTILOS DEL CONTENEDOR DE LA IMAGEN CUANDO ESTAMOS EN LA PANTALLA DE DETALLE DE LA FOTO*/
+.image-container-detail{
+    /*width: 100%;*/
+    max-height: 100vh;
+    overflow: hidden;
+}
+/*ESTILOS DE LA IMAGEN CUANDO ESTA EN LA PANTALLA DE DETALLE DE LA IMAGEN */ 
+.image-container-detail img{
+    width: 100%;
+}
+
 
 /*ESTILOS DE LA DESCRIPCION QUE INCLUYE EL NICK Y LA DESCRIPCION*/
 .imagen_publicada .description{

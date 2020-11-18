@@ -21,13 +21,21 @@ class ImageController extends Controller
     } 
     
     public function save(Request $request ){
+        // Reglas de valicación
+        $reglas = [
+            'description'=>'required',
+            'image_path'=>'required|image'
+        ];
+
+        $message=[
+            'description.required'=>'¡¡LA DESCRIPCIÓN DE LA IMAGEN NO PUEDE ESTAR VACÍA!!',
+            'image_path.required'=>'¡¡NO HAS SELECCIONADO NINGÚN ARCHIVO PARA SUBIR!!',
+            'image_path.image'=>'¡¡EL ARCHIVO QUE INTENTAS SUBIR NO ES UNA IMAGEN,SOLO SE PUEDEN SUBIR IMAGENES!!'
+        ];
+        
         // Validacion de datos
-        $validate = $this->validate($request, [
-            'description' => 'required',
-            'image_path' => 'required|image'
-        ]);
-        
-        
+        $this->validate($request,$reglas,$message);
+              
         
         // Recogiendo los datos 
         $user_id = $request->input('user_id');
@@ -65,7 +73,13 @@ class ImageController extends Controller
     return new Response($file,200);       
     }
     
-    
+    public function detail($id){
+        // Método find de eloquent para buscar por un id del modelo que se le pase
+        $image=Image::find($id);
+        return view('image.detail',[
+              'image'=>$image  
+        ]);
+    }
     
     
 }

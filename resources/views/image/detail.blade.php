@@ -3,10 +3,10 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             @include('includes.mensaje') <!-- AQUI SE MUESTRA EL MENSAJE FLASH -->
             <!-- AQUI RECORREMOS LA VARIABLE IMAGES QUE NOS VIENE DEL CONTROLADOR HOME -->
-            @foreach($images as $image)
+
             <div class="card imagen_publicada">
                 <div class="card-header">
 
@@ -19,28 +19,24 @@
                         <img src="{{asset('images/avatar.jpg')}}">    
                     </div>
                     @endif
-                    
-                    <div class="data-user">
-                        <a href="{{route('image.detail',['id'=>$image->id])}}">
-                            {{$image->user->name.''.$image->user->surname}}
-                            <span class="nickname">
-                                {{' | @'.$image->user->nick}}
-                            </span>
-                        </a>    
+
+                    <div class="data-user-detail">
+                        {{$image->user->name.''.$image->user->surname}}
+                        <span class="nickname">
+                            {{' | @'.$image->user->nick}}
+                        </span>
                     </div>
                 </div>
                 <div class="card-body">
                     <!--AQUI MOSTRAMOS LA IMAGEN QUE SUBE EL USUARIO-->
-                    <div class="image-container">
+                    <div class="image-container-detail">
                         <img src="{{route('image.file',['filename'=>$image->image_path])}}">
                     </div>
-                    
+
                     <div class="description">
-                        
                         <span class="nickname">
                             {{'@'.$image->user->nick}}
                         </span>
-                        {{$image->created_at}}
                         <p>{{$image->description}}</p>
                     </div>
                     <div class="container-comentarios-likes">
@@ -53,10 +49,7 @@
                     </div>     
                 </div>
             </div> <!-- FIN DEL DIV DE LA CARD -->
-            @endforeach
-            <!-- PAGINACIÓN -->
-            <div class="clearfix"></div>
-            {{$images->links()}}
+
         </div>
 
     </div>

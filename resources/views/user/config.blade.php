@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    
+                    <!-- Mostramos en el include si hay algún mensaje flash -->
                     @include('includes.mensaje')
                     
                     <div class="card">
@@ -23,9 +23,9 @@
                                         <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{Auth::user()->name}}" required autocomplete="name" autofocus>
 
                                         @error('name')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
                                         @enderror
                                         
                                     </div>

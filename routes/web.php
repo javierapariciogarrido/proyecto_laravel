@@ -55,3 +55,4 @@ Route::get('/user/avatar/{filename}','UserController@getImage')->name('user.avat
 Route::get('/subir_imagen','ImageController@create')->name('image.create');
 Route::post('/guardar_imagen','ImageController@save')->name('image.save');
 Route::get('/image/file/{filename}','ImageController@getImage')->name('image.file');
+Route::get('/imagen/{id}','ImageController@detail')->name('image.detail');

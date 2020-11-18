@@ -17,20 +17,16 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
+    
     public function index()
     {
         // MEDIANTE ELOQUENT HAGO ORDER BY DESC Y LUEGO OBTENGO CON GET TODAS LAS IMAGENES,PERO 
         //PARA PAGINAR EN LUGAR DE HACER METODO GET HAGO METODO PAGINATE Y LE PASO 5 IMAGENES
         $images = Image::orderBy('id','desc')->paginate(5);
-        $comentarios=count($images->comments);
+        
+        
         return view('home',[
-            'images'=>$images,
-            'comentarios'=>$comentarios
+            'images'=>$images
         ]);
     }
 }

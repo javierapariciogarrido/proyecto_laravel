@@ -32,12 +32,40 @@ class UserController extends Controller
         // La validación de nick y email la parte de unique:users,email,'.$id
         // Significa que el nick sea único en la tabla de usuarios excepto que el nick coincida 
         // con el nick del id del usuario logado, la misma validación se la ponems al email
+        $reglas=['name'=>'required|alpha|max:255',
+            'surname'=>'required|alpha|max:255',
+            'nick'=>'required|string|max:255|unique:users,nick,'.$id, 
+            'email'=>'required|string|email|max:255|unique:users,email,'.$id];
+        
+        /*
         $validate = $this->validate($request,[
             'name'=>'required|alpha|max:255',
             'surname'=>'required|alpha|max:255',
             'nick'=>'required|string|max:255|unique:users,nick,'.$id, 
             'email'=>'required|string|email|max:255|unique:users,email,'.$id
         ]);
+        */
+        // Personalización de mensajes de error en la validación
+        $messages=[
+            'name.required'=>'¡¡DEBES DE INTRODUCIR UN NOMBRE DE USUARIO!!',
+            'name.alpha'=>'¡¡EL NOMBRE SE COMPONE SOLO DE LETRAS!!',
+            'name.max'=>'¡¡EL NOMBRE DE USUARIO NO PUEDE SER MAYOR A :max CARACTERES!!',
+            'surname.required'=>'¡¡DEBES DE INTRODUCIR APELLIDOS!!',
+            'surname.alpha'=>'¡¡LOS APELLIDOS SE COMPONEN SOLO DE LETRAS!!',
+            'surname.max'=>'¡¡LOS APELLIDOS NO PUEDEN SER MAYOR A :max CARACTERES!!',
+            'nick.required'=>'¡¡DEBES INTRODUCIR UN NICK!!',
+            'nick.string'=>'¡¡EL NICK DEBE SER SÓLO TEXTO',
+            'nick.max'=>'¡¡EL NICK DEL USUARIO NO PUEDE SER MAYOR A :max CARACTERES!!',
+            'nick.unique'=>'¡¡EL NICK INTRODUCIDO YA EXISTE!!',
+            'email.required'=>'¡¡DEBES INTRODUCRI UN EMAIL DE USUARIO!!',
+            'email.string'=>'¡¡EL EMAIL DEBE SER SÓLO TEXTO',
+            'email.email'=>'¡¡EL EMAIL INTRODUCIDO YA EXISTE!!',
+            'email.max'=>'¡¡EL EMAIL NO PUEDE SER MAYOR A :max CARACTERES!!',
+            'email.unique'=>'¡¡EL EMAIL INTRODUCIDO YA EXISTE!!'
+        ];
+        // Validación 
+        $this->validate($request,$reglas,$messages);
+        
         
         // Recojo los datos del usuario
         
