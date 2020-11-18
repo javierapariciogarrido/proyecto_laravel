@@ -79,5 +79,28 @@ CUANDO SE SUBE UNA IMAGEN*/
 
 /*ESTILOS DE LA DESCRIPCION QUE INCLUYE EL NICK Y LA DESCRIPCION*/
 .imagen_publicada .description{
-    padding: 2%;
+    padding: 0 2% 0 2%;    
+}
+
+
+/*ESTILOS DEL BOTÓN AMARILLO COMENTARIOS  QUE APARECE EN CADA IMAGEN SUBIDA*/
+.imagen_publicada  .btn-comments{
+    margin:2%;
+    margin-top: 0;
+}
+
+/*ESTILOS DEL DIV QUE CONTIENE LA IMAGEN DEL CORAZON DE LIKE*/
+.likes{
+    padding: 1% 2% -1% 2%;
+}
+
+/*ESTILOS DE LA IMAGEN DEL CORAZON DE LIKE*/
+.likes img{
+    width:40%;
+}
+
+
+.container-comentarios-likes{
+    display:flex;
+    /*justify-content: space-between;*/
 }

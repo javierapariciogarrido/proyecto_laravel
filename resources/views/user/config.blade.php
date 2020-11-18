@@ -83,7 +83,7 @@
 
                                     <div class="col-md-7">
                                          {{-- SACO LA IMAGEN DEL AVATAR QUE TIENE EL CLIENTE, SI TIENE IMAGEN --}} 
-                                        @include('includes.avatar') <!-- Include que llama a un metodo para sacar la imagen-->
+                                        @include('includes.avatar') <!-- Include que llama a una vista para sacar la imagen-->
                                         <label class="labelavatar">Cambiar Avatar</label>
                                         <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image">
                                         

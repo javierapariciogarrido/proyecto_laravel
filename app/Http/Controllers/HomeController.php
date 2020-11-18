@@ -24,10 +24,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $images = Image::orderBy('id','desc')->get();
-        
+        // MEDIANTE ELOQUENT HAGO ORDER BY DESC Y LUEGO OBTENGO CON GET TODAS LAS IMAGENES,PERO 
+        //PARA PAGINAR EN LUGAR DE HACER METODO GET HAGO METODO PAGINATE Y LE PASO 5 IMAGENES
+        $images = Image::orderBy('id','desc')->paginate(5);
+        $comentarios=count($images->comments);
         return view('home',[
-            'images'=>$images
+            'images'=>$images,
+            'comentarios'=>$comentarios
         ]);
     }
 }
