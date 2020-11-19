@@ -2,11 +2,13 @@
 
 @section('content')
 <div class="container">
+    
     <div class="row justify-content-center">
         <div class="col-md-8">
             @include('includes.mensaje') <!-- AQUI SE MUESTRA EL MENSAJE FLASH -->
             <!-- AQUI RECORREMOS LA VARIABLE IMAGES QUE NOS VIENE DEL CONTROLADOR HOME -->
             @foreach($images as $image)
+            
             <div class="card imagen_publicada">
                 <div class="card-header">
 
@@ -38,9 +40,10 @@
                     <div class="description">
                         
                         <span class="nickname">
-                            {{'@'.$image->user->nick}}
+                            {{'Imagen subida por @'.$image->user->nick}}
                         </span>
-                        {{$image->created_at}}
+                        <span class="nickname">{{'|'.FormatTime::LongTimeFilter($image->created_at)}}</span>
+                        
                         <p>{{$image->description}}</p>
                     </div>
                     <div class="container-comentarios-likes">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Image;
 
+
 class HomeController extends Controller
 {
     /**
@@ -24,7 +25,7 @@ class HomeController extends Controller
         //PARA PAGINAR EN LUGAR DE HACER METODO GET HAGO METODO PAGINATE Y LE PASO 5 IMAGENES
         $images = Image::orderBy('id','desc')->paginate(5);
         
-        
+                
         return view('home',[
             'images'=>$images
         ]);

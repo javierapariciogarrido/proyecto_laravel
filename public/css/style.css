@@ -106,7 +106,7 @@ CUANDO ESTAMOS EN LA PANTALLA DE DETALLE DE LA IMAGEN DONDE SE VE LA IMAGEN MAS 
 
 /*ESTILOS DE LA DESCRIPCION QUE INCLUYE EL NICK Y LA DESCRIPCION*/
 .imagen_publicada .description{
-    padding: 0 2% 0 2%;    
+    padding: 2% 2% 0 2%;    
 }
 
 
@@ -126,8 +126,22 @@ CUANDO ESTAMOS EN LA PANTALLA DE DETALLE DE LA IMAGEN DONDE SE VE LA IMAGEN MAS 
     width:40%;
 }
 
-
+/*ESTILOS DEL CONTENEDOR FLEXBOX DEL BOTON COMENTARIOS Y EL CORAZON DE LIKES DE CADA IAMGEN*/
 .container-comentarios-likes{
     display:flex;
-    /*justify-content: space-between;*/
+    justify-content:flex-end;
+    margin-top: -5%;
+}
+
+/*ESTILOS DEL CONTENEDOR FLEXBOX DE COMENTARIOS Y CORAZON DE LIKES DENTRO DE DETALLE DE IMAGEN*/
+.container-comentarios-likes-detail{
+    display: flex;
+    margin:-5% 0 4% 1.7%; 
+    justify-content: flex-end;
+}
+
+
+/*ESTILOS DEL FORMULARIO PARA INTRODUCIR COMENTARIO A LA IMAGEN DENTRO DE DETALLE IMAGEN*/
+.card .formulario-comments{
+    padding: 0 2% 2% 2%;
 }
